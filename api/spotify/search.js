@@ -1,4 +1,26 @@
 export default async function handler(req, res) {
+    res.setHeader(
+        "Access-Control-Allow-Origin",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://bodayeraylaura.com",
+        "https://jorgeglezfun.github.io"
+    );
+
+    res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, OPTIONS"
+    );
+
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Content-Type"
+    );
+
+    if (req.method === "OPTIONS") {
+        return res.status(204).end();
+    }
+
     try {
         const query = req.query.q?.trim();
 
