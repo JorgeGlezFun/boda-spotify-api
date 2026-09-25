@@ -4,6 +4,7 @@ export default async function handler(req, res) {
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "https://bodayeraylaura.com",
+        "https://jorgeglezfun.github.io/boda-pruebas/",
         "https://jorgeglezfun.github.io"
     );
 
